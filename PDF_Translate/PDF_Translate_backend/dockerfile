@@ -1,0 +1,11 @@
+FROM awwaawwa/pdfmathtranslate-next:latest
+
+WORKDIR /app
+
+# Копируем ваш FastAPI-скрипт внутрь контейнера
+COPY api_server.py /app/api_server.py
+
+EXPOSE 8089
+
+# Переопределяем стандартный запуск Gradio на Uvicorn
+CMD ["python", "/app/api_server.py"]
