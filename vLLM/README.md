@@ -1,3 +1,5 @@
+Конфигурация для карты NVIDIA RTX PRO 4500 32Gb
+
 ```bash exec="1" source="block"
 docker run --rm --gpus all -p 8000:8000 --name vLLM --shm-size 16g \
   -v /var/models:/models:Z \
